@@ -1,0 +1,32 @@
+
+<div *ngIf="productDetails">
+  <h3>Product Details</h3>
+  <div>
+    <label><b>Id: </b></label> {{productDetails.id}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{productDetails.name}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{productDetails.description}}
+  </div>
+  <div>
+    <label><b>Main img Url: </b></label> {{productDetails.mainImg}}
+  </div>
+  <div>
+    <label><b>Portfolio Id: </b></label> {{productDetails.portfId}}
+  </div>
+</div> 
+
+
+<div *ngFor="let prImg of productImg">
+  <div>
+    <label><b>Path: </b></label> {{prImg.path}}
+  </div>
+</div>
+
+<!-- <div *ngFor="let prod of productDetails">
+    <div>
+      <label><b>First Name: </b></label> {{prod.id}}
+    </div>
+</div> -->

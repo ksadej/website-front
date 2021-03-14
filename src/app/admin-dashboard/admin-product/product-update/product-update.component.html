@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+    <div class="panel-body">
+      <table class="table table-striped"  cellspacing="0">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prodUpdate of productUpdate">
+            <td width="200" height="80" style="line-height: 80px;">
+                <img class="card-img-top" [src]="prodUpdate.mainImg"/>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

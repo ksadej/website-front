@@ -1,0 +1,104 @@
+<!-- <div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Portfolio</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    </div>
+    <div class="row my-5">
+
+             <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                        <a type="image" data-toggle="collapse" href="#collapseWallets" aria-expanded="false" aria-controls="collapseWallets">
+                            <div class="single-post-catagory mb-30" *ngFor="let portfolio of portfolioList">
+                                <img class="img-fluid" [src]="portfolio.path" alt="" />                              
+                                <div class="catagory-content-bg">
+                                    <div class="catagory-content" >
+                                        <div class="post-tag" >Handmade</div>
+                                        <div  class="post-title">{{portfolio.name}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a type="image" data-toggle="collapse" href="#collapseBelts" aria-expanded="false" aria-controls="collapseBelts">
+                        <div class="single-post-catagory mb-30">
+                            <img class="img-fluid" src="assets/img/portfolio/img_2/pasek-8/1-1.jpg" alt="" />                              
+                            <div class="catagory-content-bg">
+                                <div class="catagory-content" >
+                                    <div class="post-tag" >Handmade</div>
+                                    <div  class="post-title">Belts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a type="image" data-toggle="collapse" href="#collapseWatchStraps" aria-expanded="false" aria-controls="collapseWatchStraps">
+                        <div class="single-post-catagory mb-30">
+                            <img class="img-fluid" src="assets/img/portfolio/img_2/zegarek-2/2.jpg" alt="" (click)="watchStrapsList()"/>                            
+                            <div class="catagory-content-bg">
+                                <div class="catagory-content" >
+                                    <div class="post-tag" >Handmade</div>
+                                    <div  class="post-title">Watch Straps</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> 
+
+            <div class="coll" *ngIf="showList">
+                <app-watchstraps-list></app-watchstraps-list>
+            </div>
+            
+
+    </div>
+</div>     -->
+
+<!-- <div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Portfolio</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    </div>
+    <div class="row my-5">
+
+            <app-portfolio-list></app-portfolio-list>
+
+    </div>
+</div>    -->
+
+<div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Portfolio</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    </div>
+    <div class="row my-5">
+        <div class="card-columns">
+            <div class="portfolio-item">
+                <a type="image" data-toggle="collapse" href="">
+                    <div class="single-post-catagory mb-30" *ngFor="let portfolio of portfolioList" >
+                        <img class="img-fluid" [src]="portfolio.path" alt="" (click)="getPortfolioId(portfolio.id)"/>                              
+                        <div class="catagory-content-bg">
+                            <div class="catagory-content" >
+                                <div class="post-tag" >Handmade</div>
+                                <div  class="post-title">{{portfolio.name}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!-- <app-watchstraps-list></app-watchstraps-list> -->

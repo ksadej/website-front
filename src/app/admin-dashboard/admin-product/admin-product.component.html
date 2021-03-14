@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+  <h1 class="h2">Product List</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group mr-2">
+      <button type="button" routerLink="/admin-dashboard/product-add" class="btn btn-primary">Add new product</button>
+      <button class="btn btn-sm btn-outline-secondary">Share</button>
+      <button class="btn btn-sm btn-outline-secondary">Export</button>
+    </div>
+  </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-body">
+      <table class="table table-striped"  cellspacing="0">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Product group</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prod of product">
+            <td width="200" height="80" style="line-height: 80px;">
+                <img class="card-img-top" [src]="prod.mainImg"/>
+            </td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.description}}</td>
+            <td>{{prod.portfId}}</td>
+            <td>
+              <!-- <button class ="btn btn-info">Update</button>
+              <button class ="btn btn-danger" style="margin-left: 10px">Delete</button> -->
+              <button (click)="updateProduct(prod.id)" class ="btn btn-warning" style="margin-left: 10px"> Update</button>
+              <button (click)="detailsProduct(prod.id)"  class ="btn btn-warning" style="margin-left: 10px"> Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
