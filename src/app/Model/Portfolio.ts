@@ -1,5 +1,7 @@
 export class Portfolio{
     id: number;
-    name: string;
-    path: string;
+    portfolioName: string;
+    type: string;
+    imgName: string;
+    image: string;
 }

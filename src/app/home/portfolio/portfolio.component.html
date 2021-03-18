@@ -86,11 +86,11 @@
             <div class="portfolio-item">
                 <a type="image" data-toggle="collapse" href="">
                     <div class="single-post-catagory mb-30" *ngFor="let portfolio of portfolioList" >
-                        <img class="img-fluid" [src]="portfolio.path" alt="" (click)="getPortfolioId(portfolio.id)"/>                              
+                        <img class="img-fluid" [src]="'data:image/jpg;base64,'+portfolio.image" alt="" (click)="getPortfolioId(portfolio.id)"/>                              
                         <div class="catagory-content-bg">
                             <div class="catagory-content" >
                                 <div class="post-tag" >Handmade</div>
-                                <div  class="post-title">{{portfolio.name}}</div>
+                                <div  class="post-title">{{portfolio.portfolioName}}</div>
                             </div>
                         </div>
                     </div>
