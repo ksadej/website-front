@@ -23,7 +23,7 @@
         <tbody>
           <tr *ngFor="let prod of product">
             <td width="200" height="80" style="line-height: 80px;">
-                <img class="card-img-top" [src]="prod.mainImg"/>
+                <img class="card-img-top" [src]="'data:image/jpg;base64,'+prod.mainImg"/>
             </td>
             <td>{{prod.name}}</td>
             <td>{{prod.description}}</td>

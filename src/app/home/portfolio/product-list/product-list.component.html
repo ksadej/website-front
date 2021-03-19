@@ -1,12 +1,12 @@
 <div class="container-fluid my-5">
     <div class="text-center">
-        <h2 class="section-heading text-uppercase">Watch Straps</h2>
+        <h2 class="section-heading text-uppercase">Watch Test</h2>
         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
     </div>
     <div class="card-columns">
         <div class="card"  *ngFor="let prod of productList">
             <a class="portfolio-link " href="#">
-                <img class="card-img-top" [src]="prod.mainImg"   />
+                <img class="card-img-top" [src]="'data:image/jpg;base64,'+prod.mainImg"   />
             </a>
         </div>
     </div>

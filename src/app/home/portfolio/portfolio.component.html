@@ -86,7 +86,7 @@
             <div class="portfolio-item">
                 <a type="image" data-toggle="collapse" href="">
                     <div class="single-post-catagory mb-30" *ngFor="let portfolio of portfolioList" >
-                        <img class="img-fluid" [src]="'data:image/jpg;base64,'+portfolio.image" alt="" (click)="getPortfolioId(portfolio.id)"/>                              
+                        <img class="img-fluid" [src]="'data:image/jpg;base64,'+portfolio.image" alt="" (click)="onPress()" (click)="getPortfolioId(portfolio.id)"/>                              
                         <div class="catagory-content-bg">
                             <div class="catagory-content" >
                                 <div class="post-tag" >Handmade</div>
@@ -98,7 +98,9 @@
             </div>
         </div>
     </div>
+</div>
+<div id="comp-render" *ngIf="display">
+    <router-outlet></router-outlet>
 </div>    
-
-
+<!-- <app-product-list></app-product-list> -->
 <!-- <app-watchstraps-list></app-watchstraps-list> -->

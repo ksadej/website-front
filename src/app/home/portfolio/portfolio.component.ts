@@ -16,7 +16,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute) { }
-
+    display: boolean = true;
     id:any;
 
   ngOnInit(): void {
@@ -24,9 +24,12 @@ export class PortfolioComponent implements OnInit {
   }
 
   getPortfolioId(id: number){
-    this.router.navigate(['product-list', id]);
+    this.router.navigate(['home','product-list', id]);
   }
-
+  
+  onPress() {
+    this.display = !this.display;
+  }
 
   loadPortfolio(){
     this.productService.getAllPortfolio().subscribe((data)=>{

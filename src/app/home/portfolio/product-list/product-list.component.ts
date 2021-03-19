@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    //console.log(this.id);
+    console.log(this.id);
     this.loadProductByPortfId(this.id);
   }
 

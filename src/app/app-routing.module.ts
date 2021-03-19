@@ -14,9 +14,12 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent,
+  children:[
+    {path: 'product-list/:id', component: ProductListComponent}
+  ]},
   {path: 'details/:id', component: DetailsComponent },
-  {path: 'product-list/:id', component: ProductListComponent},
+ // {path: 'product-list/:id', component: ProductListComponent},
   {path: 'admin-dashboard', component: AdminDashboardComponent,
   children:[
     {path: 'admin-portfolio', component: AdminPortfolioComponent},
